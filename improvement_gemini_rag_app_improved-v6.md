@@ -488,18 +488,18 @@ The user wants to implement incremental indexing using `WatermarkTracker` in `ra
     - Update the watermark after successful indexing.
 5. **Modify `clear_cache` to clear the `WatermarkTracker` as well (optional but good practice).**
 
-Let's start implementing these steps in `rag_app-v6.py` to create `rag_app-v7.py`.
+Let's start implementing these steps in `rag_app-v5.py` to create `rag_app-v6.py`.
 
-**Step 2.1: Add `WatermarkTracker` class to `rag_app-v7.py`**
+**Step 2.1: Add `WatermarkTracker` class to `rag_app-v6.py`**
 
-Copy the `WatermarkTracker` class from `suggestions_for_improvement.md.txt` and paste it at the beginning of `rag_app-v7.py` (after imports).
+Copy the `WatermarkTracker` class from `suggestions_for_improvement.md.txt` and paste it at the beginning of `rag_app-v6.py` (after imports).
 
 **Step 2.2: Initialize `WatermarkTracker` in `load_resources` function**
 
 We will initialize `WatermarkTracker` as a global variable.
 
 ```python
-# rag_app-v7.py
+# rag_app-v6.py
 # ... (imports and WatermarkTracker class)
 
 # --- Global Variables (for caching) ---
@@ -673,5 +673,3 @@ We will address these limitations in the next iteration focusing on persistent s
    - Verify that indexing completes. Check the "Indexing Status" message - it should indicate "Incremental indexing complete! New files indexed." if the modification time is correctly detected.
 
 If these tests pass, it means the basic `WatermarkTracker` logic for detecting new/modified files and skipping indexing when no changes are detected is working.  We can then move on to addressing the index updating and persistent storage issues.
-
-Let's proceed with implementing the changes in `rag_app-v6.py` and then perform these tests.
