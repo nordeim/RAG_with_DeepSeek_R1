@@ -85,7 +85,7 @@ Okay, I have performed a detailed line-by-line comparison of `rag_app-v6.py` and
 *   **`rag_app-v6.py`**: The entire `WatermarkTracker` class definition is added.
     ```python
     class WatermarkTracker:
-        # ... (class definition as in rag_app-v7.py)
+        # ... (class definition as in rag_app-v6.py)
         pass
     ```
     **Validation:** `WatermarkTracker` class is correctly implemented as per design. **PASS**
