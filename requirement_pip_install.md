@@ -8,7 +8,7 @@ pip install pytesseract
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 pip install sentence-transformers rank-bm25
 pip install pypdf sentence-transformers faiss-cpu numpy openai python-dotenv
-pip install faiss-cpu sentence-transformers openai python-dotenv gradio pypdf
+pip install faiss-cpu sentence-transformers openai python-dotenv gradio pypdf rank_bm25
 pip install -U open-webui
 pip install -U crawl4ai
 pip install -U smolagents
