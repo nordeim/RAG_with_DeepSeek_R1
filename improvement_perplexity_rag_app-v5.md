@@ -1,4 +1,4 @@
-# Comprehensive Examination of Indexing and Querying Methodologies**  
+# Comprehensive Examination of Indexing and Querying Methodologies
 
 ## Executive Summary  
 Retrieval-Augmented Generation (RAG) systems combine document retrieval with large language models (LLMs) to enhance factual accuracy and context relevance. This paper dissects the architecture of a Python-based RAG application, analyzing its indexing and querying pipelines. Drawing insights from industry standards ([1][2][3][4][5][6][7]) and open-source best practices, we propose optimizations for improved efficiency, accuracy, and scalability.  
