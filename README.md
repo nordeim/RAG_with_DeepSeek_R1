@@ -1,7 +1,7 @@
 ## two enhanced web based versions of https://github.com/PromtEngineer/RAG_with_DeepSeek_R1
 
 ```
-pip install pypdf sentence-transformers faiss-cpu numpy openai python-dotenv pdfplumber
+pip install pypdf sentence-transformers faiss-cpu numpy openai python-dotenv pdfplumber libmagic
 python rag_app-v5.py
 ```
 ![image](https://github.com/user-attachments/assets/7a3e09cb-1cab-480f-a0d2-891e2170f173)
