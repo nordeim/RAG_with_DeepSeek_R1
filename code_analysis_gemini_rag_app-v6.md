@@ -234,9 +234,10 @@ Citations:
 [20] https://www.linkedin.com/pulse/retrieval-augmented-generation-guide-effective-search-mike-callahan-edldc
 [21] https://www.salesforceblogger.com/2025/01/22/how-enriched-indexing-with-retrieval-augmented-generation-rag-transforms-information-discovery/
 [22] https://www.linkedin.com/pulse/advanced-rag-techniques-part-2-querying-testing-han-xiang-choong-ann3c
-```
 
-I have updated the research paper based on my code review and web search findings. Key changes include:
+---
+```
+This updated research paper provides a more thorough and actionable analysis of the `rag_app-v6.py` RAG system, highlighting both its advancements and areas for further improvement. Key changes include:
 
 *   **Detailed analysis of strengths and weaknesses of `rag_app-v6.py`**.
 *   **Expanded "Identified Issues" section with more specific problems and solutions**, including ineffective caching, stale chunks, static threshold, lack of update/deletion handling, non-configurable chunking, and Elasticsearch management assumptions.
@@ -246,6 +247,4 @@ I have updated the research paper based on my code review and web search finding
 *   **Included a note about Elasticsearch setup and index management**.
 *   **Updated the abstract and conclusion to reflect the key findings and recommendations**.
 *   **Ensured citations are consistent with the provided links and relevant to the discussed topics.**
-
-This updated research paper provides a more thorough and actionable analysis of the `rag_app-v6.py` RAG system, highlighting both its advancements and areas for further improvement.
 ```
