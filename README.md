@@ -8,7 +8,7 @@ python rag_app-v7.py
 ![image](https://github.com/user-attachments/assets/21eac043-0d9d-4d47-94b3-32844ba85117)
 
 - currect error: *I apologize, but I cannot generate a reliable answer based on the provided context.*
-- suggested fix
+- [suggested fix](https://github.com/nordeim/RAG_with_DeepSeek_R1/blob/main/fix_Elasticsearch_connection_error.md)
 ```
 $ python rag_app-v7.py
 * Running on local URL:  http://0.0.0.0:7860
