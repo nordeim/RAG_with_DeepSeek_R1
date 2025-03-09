@@ -2,6 +2,30 @@
 
 ```
 pip install pypdf sentence-transformers faiss-cpu numpy openai python-dotenv pdfplumber libmagic
+python rag_app-v7.py
+```
+![image](https://github.com/user-attachments/assets/2c0f9f81-e7fb-40b0-9122-c945f4f2b7f8)
+![image](https://github.com/user-attachments/assets/21eac043-0d9d-4d47-94b3-32844ba85117)
+
+- currect error: *I apologize, but I cannot generate a reliable answer based on the provided context.*
+- suggested fix
+```
+$ python rag_app-v7.py
+* Running on local URL:  http://0.0.0.0:7860
+
+To create a public link, set `share=True` in `launch()`.
+/cdrom/venv/mychat/lib/python3.12/site-packages/gradio/blocks.py:1829: UserWarning: A function (index_with_status) returned too many output values (needed: 5, returned: 6). Ignoring extra values.
+    Output components:
+        [textbox, textbox, file, file, file]
+    Output values returned:
+        ["Starting indexing process...", "Incremental indexing complete!", "embeddings.npy", "faiss_index.index", "chunks.json", "bm25_index.pkl"]
+  warnings.warn(
+Elasticsearch query failed: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7ac5ec8da330>: Failed to establish a new connection: [Errno 111] Connection refused))
+
+```
+
+---
+```
 python rag_app-v5.py
 ```
 ![image](https://github.com/user-attachments/assets/7a3e09cb-1cab-480f-a0d2-891e2170f173)
