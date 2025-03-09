@@ -68,7 +68,6 @@ Let's proceed with updating the research paper based on these findings. I will m
 
 Here is the updated research paper:
 
-```markdown
 **Research Paper: Analysis of Retrieval-Augmented Generation (RAG) Implementation in rag_app-v6.py**
 
 **Abstract**
