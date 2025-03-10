@@ -4,13 +4,20 @@
 pip install pypdf sentence-transformers faiss-cpu numpy openai python-dotenv pdfplumber libmagic
 python rag_app-v8.py
 ```
-![image](https://github.com/user-attachments/assets/2c0f9f81-e7fb-40b0-9122-c945f4f2b7f8)
+![image](https://github.com/user-attachments/assets/c8463d95-34ad-4b55-b40f-1a12c81ba647)
 ![image](https://github.com/user-attachments/assets/21eac043-0d9d-4d47-94b3-32844ba85117)
 
 - currect error: *I apologize, but I cannot generate a reliable answer based on the provided context.*
 - [suggested fix](https://github.com/nordeim/RAG_with_DeepSeek_R1/blob/main/fix_Elasticsearch_connection_error.md)
 ```
-$ python rag_app-v7.py
+$ env | grep ELASTIC
+ELASTICSEARCH_HOST=http://localhost:9200
+ELASTICSEARCH_PASSWORD=vakWlJO9UFVHL=Cugr3_
+ELASTICSEARCH_USER=elastic
+ELASTICSEARCH_VERIFY_CERTS=false
+ELASTICSEARCH_CERT_PATH=/etc/ssl/certs/ca-certificates.crt
+(mychat) pete@pop-os:/cdrom/venv/mychat/RAG_app
+$ python3 rag_app-v8.py 
 * Running on local URL:  http://0.0.0.0:7860
 
 To create a public link, set `share=True` in `launch()`.
@@ -20,7 +27,7 @@ To create a public link, set `share=True` in `launch()`.
     Output values returned:
         ["Starting indexing process...", "Incremental indexing complete!", "embeddings.npy", "faiss_index.index", "chunks.json", "bm25_index.pkl"]
   warnings.warn(
-Elasticsearch query failed: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7ac5ec8da330>: Failed to establish a new connection: [Errno 111] Connection refused))
+Elasticsearch query failed: NotFoundError(404, 'index_not_found_exception', 'no such index [chunks]', chunks, index_or_alias)
 
 ```
 
