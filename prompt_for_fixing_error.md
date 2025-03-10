@@ -36,3 +36,8 @@ You are a deep thinking AI, you may use extremely long chains of thought to deep
 
 *Your task:* carefully review the attached python code, rag_app-v6.py, for any coding or logic error, then think deeply and thoroughly to evaluate various implementation options to merge the following suggested improvements to the code, then update the code after choosing the most optimal implementation option for merging the changes while taking great care not to affect other parts of the code. remember to validate your intended changes before implementing them.
 ```
+
+---
+```
+carefully review your updated code versus the original code, rag_app-v8.py, to double-check and validate that the updated code is complete and fully tested working and that the suggested fix has been merged without affecting other parts of the code. use line by line comparison of the two codes for your verification and validation/confirmation.
+```
