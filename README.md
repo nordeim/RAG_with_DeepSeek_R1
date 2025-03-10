@@ -2,10 +2,10 @@
 
 ```
 pip install pypdf sentence-transformers faiss-cpu numpy openai python-dotenv pdfplumber libmagic
-python rag_app-v8.py
+python rag_app-v9.py
 ```
-![image](https://github.com/user-attachments/assets/c8463d95-34ad-4b55-b40f-1a12c81ba647)
-![image](https://github.com/user-attachments/assets/21eac043-0d9d-4d47-94b3-32844ba85117)
+![image](https://github.com/user-attachments/assets/f52e2275-4303-4b5b-8720-14fe44bdc3ec)
+![image](https://github.com/user-attachments/assets/a55f7af0-6195-4eab-a8a1-18b2e12cbf2e)
 
 - currect error: *I apologize, but I cannot generate a reliable answer based on the provided context.*
 - [suggested fix](https://github.com/nordeim/RAG_with_DeepSeek_R1/blob/main/fix_Elasticsearch_connection_error.md)
@@ -17,18 +17,22 @@ ELASTICSEARCH_USER=elastic
 ELASTICSEARCH_VERIFY_CERTS=false
 ELASTICSEARCH_CERT_PATH=/etc/ssl/certs/ca-certificates.crt
 (mychat) pete@pop-os:/cdrom/venv/mychat/RAG_app
-$ python3 rag_app-v8.py 
+$ python3 rag_app-v9.py
 * Running on local URL:  http://0.0.0.0:7860
 
 To create a public link, set `share=True` in `launch()`.
+Elasticsearch index 'chunks' created successfully.
+Error during Elasticsearch indexing: 1 validation error for ProgressUnit
+progress
+  Input should be a valid number [type=float_type, input_value=<enumerate object at 0x7c24cebf2bb0>, input_type=enumerate]
+    For further information visit https://errors.pydantic.dev/2.10/v/float_type
+Warning: Elasticsearch indexing failed, continuing with other indices
 /cdrom/venv/mychat/lib/python3.12/site-packages/gradio/blocks.py:1829: UserWarning: A function (index_with_status) returned too many output values (needed: 5, returned: 6). Ignoring extra values.
     Output components:
         [textbox, textbox, file, file, file]
     Output values returned:
         ["Starting indexing process...", "Incremental indexing complete!", "embeddings.npy", "faiss_index.index", "chunks.json", "bm25_index.pkl"]
   warnings.warn(
-Elasticsearch query failed: NotFoundError(404, 'index_not_found_exception', 'no such index [chunks]', chunks, index_or_alias)
-
 ```
 
 ---
