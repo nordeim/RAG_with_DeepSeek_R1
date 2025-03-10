@@ -2,7 +2,7 @@
 
 ```
 pip install pypdf sentence-transformers faiss-cpu numpy openai python-dotenv pdfplumber libmagic
-python rag_app-v7.py
+python rag_app-v8.py
 ```
 ![image](https://github.com/user-attachments/assets/2c0f9f81-e7fb-40b0-9122-c945f4f2b7f8)
 ![image](https://github.com/user-attachments/assets/21eac043-0d9d-4d47-94b3-32844ba85117)
