@@ -2,13 +2,11 @@
 
 ```
 pip install pypdf sentence-transformers faiss-cpu numpy openai python-dotenv pdfplumber libmagic
-python rag_app-v10.py
+python rag_app-v11.py # working great!
 ```
 ![image](https://github.com/user-attachments/assets/281d6c08-7e7c-45e9-adbf-82c044fea85c)
-![image](https://github.com/user-attachments/assets/2e1b3a74-4c48-4e51-9507-8e190568a334)
+![image](https://github.com/user-attachments/assets/54004d8a-4fc4-4c2a-a0a0-bf0d30cd3f92)
 
-- currect error: *I apologize, but I cannot generate a reliable answer based on the provided context.*
-- [suggested fix](https://github.com/nordeim/RAG_with_DeepSeek_R1/blob/main/fix_Elasticsearch_querrying_error-v10.md)
 ```
 $ env | grep ELASTIC
 ELASTICSEARCH_HOST=http://localhost:9200
@@ -17,14 +15,29 @@ ELASTICSEARCH_USER=elastic
 ELASTICSEARCH_VERIFY_CERTS=false
 ELASTICSEARCH_CERT_PATH=/etc/ssl/certs/ca-certificates.crt
 
-$ python3 rag_app-v10.py
+$ python3 rag_app-v11.py
 * Running on local URL:  http://0.0.0.0:7860
 
 To create a public link, set `share=True` in `launch()`.
+
+[DEBUG 2025-03-12T12:35:58.585122] Processing query: Summarize the key points in the documents.
 Successfully connected to Elasticsearch
-Elasticsearch indexing complete.
-/cdrom/venv/mychat/RAG_app/rag_app-v10.py:594: DeprecationWarning: Passing transport options in the API method is deprecated. Use 'Elasticsearch.options()' instead.
+/cdrom/venv/mychat/RAG_app/rag_app-v11.py:699: DeprecationWarning: Passing transport options in the API method is deprecated. Use 'Elasticsearch.options()' instead.
   es_results = es_client.search(
+[DEBUG] Retrieved 4 relevant chunks
+[DEBUG] Structured context created (1220 chars)
+[DEBUG] Generated response (650 chars)
+
+[DEBUG] Starting enhanced answer validation...
+[DEBUG] Detected query type: summary
+[DEBUG] Validation Metrics:
+  - Answer-Context Similarity: 0.6591
+  - Answer-Query Similarity: 0.2085
+  - Context-Query Similarity: 0.1815
+  - Required Thresholds (type=summary):
+    * Context: 0.6000
+    * Query: 0.1500
+[DEBUG] Validation passed
 ```
 
 ---
