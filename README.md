@@ -2,10 +2,10 @@
 
 ```
 pip install pypdf sentence-transformers faiss-cpu numpy openai python-dotenv pdfplumber libmagic
-python rag_app-v9.py
+python rag_app-v10.py
 ```
-![image](https://github.com/user-attachments/assets/f52e2275-4303-4b5b-8720-14fe44bdc3ec)
-![image](https://github.com/user-attachments/assets/a55f7af0-6195-4eab-a8a1-18b2e12cbf2e)
+![image](https://github.com/user-attachments/assets/281d6c08-7e7c-45e9-adbf-82c044fea85c)
+![image](https://github.com/user-attachments/assets/2e1b3a74-4c48-4e51-9507-8e190568a334)
 
 - currect error: *I apologize, but I cannot generate a reliable answer based on the provided context.*
 - [suggested fix](https://github.com/nordeim/RAG_with_DeepSeek_R1/blob/main/fix_Elasticsearch_connection_error.md)
@@ -16,23 +16,15 @@ ELASTICSEARCH_PASSWORD=vakWlJO9UFVHL=Cugr3_
 ELASTICSEARCH_USER=elastic
 ELASTICSEARCH_VERIFY_CERTS=false
 ELASTICSEARCH_CERT_PATH=/etc/ssl/certs/ca-certificates.crt
-(mychat) pete@pop-os:/cdrom/venv/mychat/RAG_app
-$ python3 rag_app-v9.py
+
+$ python3 rag_app-v10.py
 * Running on local URL:  http://0.0.0.0:7860
 
 To create a public link, set `share=True` in `launch()`.
-Elasticsearch index 'chunks' created successfully.
-Error during Elasticsearch indexing: 1 validation error for ProgressUnit
-progress
-  Input should be a valid number [type=float_type, input_value=<enumerate object at 0x7c24cebf2bb0>, input_type=enumerate]
-    For further information visit https://errors.pydantic.dev/2.10/v/float_type
-Warning: Elasticsearch indexing failed, continuing with other indices
-/cdrom/venv/mychat/lib/python3.12/site-packages/gradio/blocks.py:1829: UserWarning: A function (index_with_status) returned too many output values (needed: 5, returned: 6). Ignoring extra values.
-    Output components:
-        [textbox, textbox, file, file, file]
-    Output values returned:
-        ["Starting indexing process...", "Incremental indexing complete!", "embeddings.npy", "faiss_index.index", "chunks.json", "bm25_index.pkl"]
-  warnings.warn(
+Successfully connected to Elasticsearch
+Elasticsearch indexing complete.
+/cdrom/venv/mychat/RAG_app/rag_app-v10.py:594: DeprecationWarning: Passing transport options in the API method is deprecated. Use 'Elasticsearch.options()' instead.
+  es_results = es_client.search(
 ```
 
 ---
