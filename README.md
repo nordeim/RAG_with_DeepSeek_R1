@@ -1,5 +1,9 @@
 ## two enhanced web based versions of https://github.com/PromtEngineer/RAG_with_DeepSeek_R1
-
+```
+pip install pypdf sentence-transformers faiss-cpu numpy openai python-dotenv pdfplumber libmagic
+pip install python-magic unstructured python-docx openpyxl
+python rag_app-v12.py  # added multiple file types extraction with utility, file_utils.py
+```
 ```
 pip install pypdf sentence-transformers faiss-cpu numpy openai python-dotenv pdfplumber libmagic
 python rag_app-v11.py # working great!
