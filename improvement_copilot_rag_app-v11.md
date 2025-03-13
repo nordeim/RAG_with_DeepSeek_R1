@@ -82,3 +82,4 @@ The implementation looks solid and maintains the system's integrity while adding
 You'll need to install additional dependencies. The changes are backward compatible and won't affect existing PDF processing while adding support for additional file types.
 
 --- 
+https://chatgpt.com/share/67d23935-5fac-8000-9d23-8b00bcf2ea42
