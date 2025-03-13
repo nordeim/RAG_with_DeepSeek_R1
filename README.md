@@ -5,6 +5,95 @@ pip install python-magic unstructured python-docx openpyxl
 python rag_app-v12.py  # added multiple file types extraction with utility, file_utils.py
 ```
 ```
+$ python3 rag_app-v12.py
+* Running on local URL:  http://0.0.0.0:7860
+INFO:httpx:HTTP Request: GET http://localhost:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD http://localhost:7860/ "HTTP/1.1 200 OK"
+
+To create a public link, set `share=True` in `launch()`.
+INFO:httpx:HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+INFO:sentence_transformers.SentenceTransformer:Use pytorch device_name: cpu
+INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+INFO:elastic_transport.transport:HEAD http://localhost:9200/ [status:200 duration:0.099s]
+Successfully connected to Elasticsearch
+INFO:elastic_transport.transport:HEAD http://localhost:9200/chunks [status:200 duration:0.003s]
+INFO:elastic_transport.transport:PUT http://localhost:9200/chunks/_doc/0 [status:200 duration:0.105s]
+INFO:elastic_transport.transport:PUT http://localhost:9200/chunks/_doc/1 [status:200 duration:0.210s]
+INFO:elastic_transport.transport:PUT http://localhost:9200/chunks/_doc/2 [status:200 duration:0.077s]
+Elasticsearch indexing complete.
+
+[DEBUG 2025-03-13T09:57:09.219194] Processing query: Summarize the key points in the documents.
+Batches: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  6.71steps/s]
+/cdrom/venv/mychat/RAG_app/rag_app-v12.py:683: DeprecationWarning: Passing transport options in the API method is deprecated. Use 'Elasticsearch.options()' instead.
+  es_results = es_client.search(
+INFO:elastic_transport.transport:POST http://localhost:9200/chunks/_search [status:200 duration:0.057s]
+[DEBUG] Retrieved 4 relevant chunks
+[DEBUG] Structured context created (1220 chars)
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[DEBUG] Generated response (804 chars)
+
+[DEBUG] Starting enhanced answer validation...
+[DEBUG] Detected query type: summary
+Batches: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.46steps/s]
+Batches: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:01<00:00,  1.13s/steps]
+Batches: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.91steps/s]
+Batches: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  7.89steps/s]
+Batches: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:01<00:00,  1.14s/steps]
+Batches: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  7.82steps/s]
+[DEBUG] Validation Metrics:
+  - Answer-Context Similarity: 0.5985
+  - Answer-Query Similarity: 0.1450
+  - Context-Query Similarity: 0.1815
+  - Required Thresholds (type=summary):
+    * Context: 0.6000
+    * Query: 0.1500
+[DEBUG] Validation details:
+  Context check: 0.5985 > 0.6000 = False
+  Query check: 0.1450 > 0.1500 = False
+[DEBUG] Validation failed
+[DEBUG] Answer validation failed, attempting fallback...
+
+$ python3 rag_app-v12.py
+* Running on local URL:  http://0.0.0.0:7860
+INFO:httpx:HTTP Request: GET http://localhost:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD http://localhost:7860/ "HTTP/1.1 200 OK"
+
+To create a public link, set `share=True` in `launch()`.
+INFO:httpx:HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+
+[DEBUG 2025-03-13T10:02:37.047342] Processing query: Summarize the key points in the documents.
+INFO:sentence_transformers.SentenceTransformer:Use pytorch device_name: cpu
+INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+INFO:elastic_transport.transport:HEAD http://localhost:9200/ [status:200 duration:0.004s]
+Successfully connected to Elasticsearch
+Batches: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  7.20steps/s]
+/cdrom/venv/mychat/RAG_app/rag_app-v12.py:683: DeprecationWarning: Passing transport options in the API method is deprecated. Use 'Elasticsearch.options()' instead.
+  es_results = es_client.search(
+INFO:elastic_transport.transport:POST http://localhost:9200/chunks/_search [status:200 duration:0.044s]
+[DEBUG] Retrieved 4 relevant chunks
+[DEBUG] Structured context created (1220 chars)
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[DEBUG] Generated response (691 chars)
+
+[DEBUG] Starting enhanced answer validation...
+[DEBUG] Detected query type: summary
+Batches: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.69steps/s]
+Batches: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:01<00:00,  1.15s/steps]
+Batches: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.94steps/s]
+Batches: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  7.09steps/s]
+Batches: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:01<00:00,  1.13s/steps]
+Batches: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 10.38steps/s]
+[DEBUG] Validation Metrics:
+  - Answer-Context Similarity: 0.6736
+  - Answer-Query Similarity: 0.2545
+  - Context-Query Similarity: 0.1815
+  - Required Thresholds (type=summary):
+    * Context: 0.5000
+    * Query: 0.1000
+[DEBUG] Validation passed
+```
+
+```
 pip install pypdf sentence-transformers faiss-cpu numpy openai python-dotenv pdfplumber libmagic
 python rag_app-v11.py # working great!
 ```
