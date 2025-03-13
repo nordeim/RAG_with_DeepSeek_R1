@@ -6,7 +6,17 @@ pip install pypdf sentence-transformers faiss-cpu numpy openai python-dotenv pdf
 pip install python-magic unstructured python-docx openpyxl
 python rag_app-v12.py  # added multiple file types extraction with utility, file_utils.py
 ```
+![image](https://github.com/user-attachments/assets/735832ce-f16d-4929-8c7c-677bef6eaa97)
+![image](https://github.com/user-attachments/assets/a0c3b4d0-936b-4d89-9244-5699f824b2f3)
+
 ```
+$ env | grep ELASTIC
+ELASTICSEARCH_HOST=http://localhost:9200
+ELASTICSEARCH_PASSWORD=vakWlJO9UFVHL=Cugr3_
+ELASTICSEARCH_USER=elastic
+ELASTICSEARCH_VERIFY_CERTS=false
+ELASTICSEARCH_CERT_PATH=/etc/ssl/certs/ca-certificates.crt
+
 $ python3 rag_app-v12.py
 * Running on local URL:  http://0.0.0.0:7860
 INFO:httpx:HTTP Request: GET http://localhost:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
@@ -98,17 +108,6 @@ Batches: 100%|██████████████████████
 ```
 pip install pypdf sentence-transformers faiss-cpu numpy openai python-dotenv pdfplumber libmagic
 python rag_app-v11.py # working great!
-```
-![image](https://github.com/user-attachments/assets/281d6c08-7e7c-45e9-adbf-82c044fea85c)
-![image](https://github.com/user-attachments/assets/54004d8a-4fc4-4c2a-a0a0-bf0d30cd3f92)
-
-```
-$ env | grep ELASTIC
-ELASTICSEARCH_HOST=http://localhost:9200
-ELASTICSEARCH_PASSWORD=vakWlJO9UFVHL=Cugr3_
-ELASTICSEARCH_USER=elastic
-ELASTICSEARCH_VERIFY_CERTS=false
-ELASTICSEARCH_CERT_PATH=/etc/ssl/certs/ca-certificates.crt
 
 $ python3 rag_app-v11.py
 * Running on local URL:  http://0.0.0.0:7860
