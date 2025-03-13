@@ -1,4 +1,4 @@
-## two enhanced web based versions of https://github.com/PromtEngineer/RAG_with_DeepSeek_R1
+**two enhanced web based [versions of](https://github.com/PromtEngineer/RAG_with_DeepSeek_R1)**
 
 [Review of rag_app-v12.py and file_utils.py](https://github.com/nordeim/RAG_with_DeepSeek_R1/blob/main/Research%20Paper%3A%20Analysis%20of%20Retrieval-Augmented%20Generation%20(RAG)%20Implementation%20in%20rag_app-v12.md)
 ```
