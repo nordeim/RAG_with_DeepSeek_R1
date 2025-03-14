@@ -1,3 +1,5 @@
+# Research Paper: Analysis of Retrieval-Augmented Generation (RAG) Implementation in rag_app-v12
+
 ### **1. Code Review of `rag_app-v12.py` and `file_utils.py`**:
 
 **General Observations from `diff` and Code:**
