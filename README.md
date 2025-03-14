@@ -168,41 +168,25 @@ Batches: 100%|██████████████████████
 
 ---
 ```
-python rag_app-v5.py
+python web_RAG-v6.py
 ```
-![image](https://github.com/user-attachments/assets/7a3e09cb-1cab-480f-a0d2-891e2170f173)
-
-![image](https://github.com/user-attachments/assets/cfc0e2f4-7078-43b1-a2bf-e503081aea92)
-
-```
-$ python3 rag_app-v5.py
-* Running on local URL:  http://0.0.0.0:7860
-
-To create a public link, set `share=True` in `launch()`.
-tokenizer_config.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 443/443 [00:00<00:00, 3.30MB/s]
-sentencepiece.bpe.model: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5.07M/5.07M [00:01<00:00, 3.27MB/s]
-tokenizer.json: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 17.1M/17.1M [00:00<00:00, 21.3MB/s]
-special_tokens_map.json: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 279/279 [00:00<00:00, 2.65MB/s]
-config.json: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 801/801 [00:00<00:00, 6.47MB/s]
-model.safetensors: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2.24G/2.24G [01:58<00:00, 18.9MB/s]
-Search error: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7b83161c8950>: Failed to establish a new connection: [Errno 111] Connection refused))
-```
-
----
-```
-python web_RAG-v2.py
-```
-![image](https://github.com/user-attachments/assets/a351238c-d9ca-4ef0-9e7a-fb2b51026961)
-
-![image](https://github.com/user-attachments/assets/42e78fb9-c7e1-4996-bea0-348b51811290)
-
-![image](https://github.com/user-attachments/assets/ec4759f6-d90b-4d52-af0f-af32141c0712)
+![image](https://github.com/user-attachments/assets/a16f6c9f-52aa-421d-9c57-791d4a8309c7)
+![image](https://github.com/user-attachments/assets/b1e59923-92cf-4aa5-89e9-ce797327d60e)
+![image](https://github.com/user-attachments/assets/c99ddc1e-f0d9-428b-a404-b4e77c625055)
 
 ```
-$ python3 web_RAG-v2.py
+$ python3 web_RAG-v6.py
 * Running on local URL:  http://127.0.0.1:7860
+INFO:httpx:HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
 
 To create a public link, set `share=True` in `launch()`.
-Skipping data after last boundary
-Illegal instruction (core dumped)
+INFO:httpx:HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+WARNING:python_multipart.multipart:Skipping data after last boundary
+INFO:sentence_transformers.SentenceTransformer:Use pytorch device_name: cpu
+INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+INFO:sentence_transformers.SentenceTransformer:Use pytorch device_name: cpu
+INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+Batches: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  5.59it/s]
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 ```
