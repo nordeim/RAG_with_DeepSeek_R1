@@ -5,7 +5,7 @@
 pip install pypdf sentence-transformers faiss-cpu numpy openai python-dotenv pdfplumber libmagic
 pip install python-magic unstructured python-docx openpyxl
 # pip install --no-cache-dir --force-reinstall sentence-transformers torch
-python rag_app-v13.py  # added multiple file types extraction with utility, file_utils.py
+python rag_app-v14.py  # added multiple file types extraction with utility, file_utils.py
 ```
 ![image](https://github.com/user-attachments/assets/e4c51ab4-1bdc-4b34-a5a9-5558776dc97e)
 ![image](https://github.com/user-attachments/assets/52b36175-bef8-45ca-9ffc-5902d9a63593)
