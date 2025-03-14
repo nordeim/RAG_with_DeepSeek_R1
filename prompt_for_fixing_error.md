@@ -66,6 +66,11 @@ You are a deep thinking AI, you may use extremely long chains of thought to deep
 
 ---
 ```
+please carefully review your latest code changes to identify a fix for the following error. think deeply and explore implementation options before choosing the option one to merge the fixes while not affecting other parts of the code.
+```
+
+---
+```
 Summarize the key points in the documents.
 format all the content of the documents as a nicely formatted markdown document.
 ```
