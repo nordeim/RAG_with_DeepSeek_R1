@@ -733,9 +733,9 @@ def create_gradio_app() -> gr.Blocks:
                             label="Embeddings Model (Display Only)",  # Changed label
                             choices=[
                                 "sentence-transformers/all-mpnet-base-v2",
-                                "jina-embeddings-v3",
-                                "text-embedding-ada-002",
+                                "jinaai/jina-embeddings-v3",
                                 "sentence-transformers/all-MiniLM-L6-v2",
+                                "BAAI/bge-m3",
                                 "sentence-transformers/multi-qa-mpnet-base-dot-v1"
                             ],
                             value=config["embeddings_model"],
