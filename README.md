@@ -168,13 +168,14 @@ Batches: 100%|██████████████████████
 
 ---
 ```
-python web_RAG-v6.py
+python web_RAG-v7.py
 ```
 ![image](https://github.com/user-attachments/assets/a16f6c9f-52aa-421d-9c57-791d4a8309c7)
-![image](https://github.com/user-attachments/assets/b1e59923-92cf-4aa5-89e9-ce797327d60e)
+![image](https://github.com/user-attachments/assets/51220174-4bb6-4d0b-9149-d0b9f3aae44f)
 ![image](https://github.com/user-attachments/assets/c99ddc1e-f0d9-428b-a404-b4e77c625055)
 
 ```
+$ python3 web_RAG-v7.py
 $ python3 web_RAG-v6.py
 * Running on local URL:  http://127.0.0.1:7860
 INFO:httpx:HTTP Request: GET http://127.0.0.1:7860/gradio_api/startup-events "HTTP/1.1 200 OK"
@@ -187,6 +188,6 @@ INFO:sentence_transformers.SentenceTransformer:Use pytorch device_name: cpu
 INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
 INFO:sentence_transformers.SentenceTransformer:Use pytorch device_name: cpu
 INFO:sentence_transformers.SentenceTransformer:Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
-Batches: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  5.59it/s]
+Batches: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  8.76it/s]
 INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 ```
