@@ -17,6 +17,9 @@ ELASTICSEARCH_PASSWORD=vakWlJO9UFVHL=Cugr3_
 ELASTICSEARCH_USER=elastic
 ELASTICSEARCH_VERIFY_CERTS=false
 ELASTICSEARCH_CERT_PATH=/etc/ssl/certs/ca-certificates.crt
+MODEL_NAME=gpt-4o-mini
+SAMBANOVA_API_BASE_URL=https://api.openai.com/v1
+SAMBANOVA_API_KEY=sk-proj-your-own-key
 
 $ python rag_app-v13.py
 * Running on local URL:  http://0.0.0.0:7860
