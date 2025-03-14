@@ -48,3 +48,7 @@ You are a deep thinking AI, you may use extremely long chains of thought to deep
 
 *Your task:* carefully review the attached python code, rag_app-v12.py, for any coding or logic error, then think deeply and thoroughly to evaluate various implementation options to merge the suggested improvements in the attached file, update_from_v12_to_v12-fixed.md, to the code, then update rag_app-v12.py after choosing the most optimal implementation option for merging the changes while taking great care not to affect other parts of the code. remember to validate your intended changes before implementing them.
 ```
+---
+```
+Carefully review the attached python code, rag_app-v13.py, for any coding or logic error, then think deeply and thoroughly to understand the code logic and flow and possible improvements. also fix the following errors. then update the code after choosing the most optimal implementation option for merging the changes while taking great care not to affect other parts of the code. remember to validate your intended changes before implementing them.
+```
