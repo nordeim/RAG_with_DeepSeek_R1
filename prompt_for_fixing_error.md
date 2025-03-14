@@ -54,6 +54,11 @@ Carefully review the attached python code, rag_app-v13.py, for any coding or log
 ```
 ---
 ```
+*Your task:* carefully review the Python code web_RAG-v6.py and the update patch file, update_web_RAG_from_v5_to_v6.md,then think deeply and explore thoroughly using extensive web searches to validate the code logic and flow of the code and to explore possible improvements and optimization in terms of functionalities. Finally create an improved updated version of the attached research paper with more comprehensive and detailed explanations and code snippets as examples based on your findings. the research paper should start with an overview, explanation of the logic and flow of the code, followed by conclusion and recommendations.
+```
+
+---
+```
 Summarize the key points in the documents.
 format all the content of the documents as a nicely formatted markdown document.
 ```
