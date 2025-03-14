@@ -103,6 +103,64 @@ Successfully connected to Elasticsearch
     * Context: 0.6000
     * Query: 0.1500
 [DEBUG] Validation passed
+
+[DEBUG 2025-03-14T11:14:34.950009] Processing query: format all the content of the documents as a nicely formatted markdown document.
+Batches: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  4.62steps/s]
+/cdrom/venv/mychat/www/rag_app-v13.py:690: DeprecationWarning: Passing transport options in the API method is deprecated. Use 'Elasticsearch.options()' instead.
+  es_results = es_client.search(
+INFO:elastic_transport.transport:POST http://localhost:9200/chunks/_search [status:200 duration:0.059s]
+[DEBUG] Applying Reranking...
+[DEBUG] Retrieved 5 relevant chunks
+[DEBUG] Structured context created (2655 chars)
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[DEBUG] Generated response (2448 chars)
+
+[DEBUG] Starting enhanced answer validation...
+[DEBUG] Detected query type: general
+Batches: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:01<00:00,  1.09s/steps]
+Batches: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:01<00:00,  1.07s/steps]
+Batches: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:01<00:00,  1.06s/steps]
+Batches: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  8.08steps/s]
+Batches: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:01<00:00,  1.11s/steps]
+Batches: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  6.99steps/s]
+[DEBUG] Validation Metrics:
+  - Answer-Context Similarity: 0.9749
+  - Answer-Query Similarity: -0.0166
+  - Context-Query Similarity: -0.0068
+  - Required Thresholds (type=general):
+    * Context: 0.5000
+    * Query: 0.0100
+[DEBUG] Validation details:
+  Context check: 0.9749 > 0.5000 = True
+  Query check: -0.0166 > 0.0100 = False
+[DEBUG] Validation failed
+[DEBUG] Answer validation failed, attempting fallback...
+
+[DEBUG 2025-03-14T11:16:54.396815] Processing query: format all the documents in markdown
+Batches: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  7.91steps/s]
+INFO:elastic_transport.transport:POST http://localhost:9200/chunks/_search [status:200 duration:0.077s]
+[DEBUG] Applying Reranking...
+[DEBUG] Retrieved 5 relevant chunks
+[DEBUG] Structured context created (2248 chars)
+INFO:httpx:HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[DEBUG] Generated response (2150 chars)
+
+[DEBUG] Starting enhanced answer validation...
+[DEBUG] Detected query type: general
+Batches: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:01<00:00,  1.06s/steps]
+Batches: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:01<00:00,  1.07s/steps]
+Batches: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:01<00:00,  1.07s/steps]
+Batches: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 10.38steps/s]
+Batches: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:01<00:00,  1.08s/steps]
+Batches: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 10.23steps/s]
+[DEBUG] Validation Metrics:
+  - Answer-Context Similarity: 0.9055
+  - Answer-Query Similarity: 0.0971
+  - Context-Query Similarity: 0.0593
+  - Required Thresholds (type=general):
+    * Context: 0.5000
+    * Query: 0.0100
+[DEBUG] Validation passed
 ```
 
 ---
